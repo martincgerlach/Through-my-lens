@@ -180,20 +180,25 @@ body.calm-nature {
   margin: 4rem auto;
   text-align: center;
 }
+.nature-gallery {
+  max-width: 900px;   /* mindre end før */
+  margin: 4rem auto;
+}
 
 .nature-intro p {
   margin-bottom: 1.5rem;
 }
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 0.8 rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
 }
 
 .gallery-grid img {
   width: 100%;
-  border-radius: 15px;
+  height: 220px;   /* mindre højde */
   object-fit: cover;
+  border-radius: 12px;
 }
 .tips {
   max-width: 700px;
@@ -212,4 +217,12 @@ body.calm-nature {
 
 .tips li {
   margin-bottom: 1rem;
+}
+.section-divider {
+  border: none;
+  height: 2px;
+  background-color: #3E5F4F; /* mørk naturgrøn */
+  opacity: 0.5;
+  margin: 4rem auto;
+  max-width: 900px;
 }
