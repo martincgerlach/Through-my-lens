@@ -1,0 +1,42 @@
+/* Base */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+/* Alle overskrifter bruger serif */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* H1 – Site title */
+.main-header h1 {
+  font-size: 2.4rem;
+}
+
+/* Hero headline */
+.hero h2 {
+  font-size: 2.8rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* CTA titles */
+.cta-overlay h2 {
+  font-size: 1.8rem;
+}
+
+/* Brødtekst */
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* CTA small text */
+.cta-overlay span {
+  font-size: 0.85rem;
+  font-weight: 500;
+}   

@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-header {
+  padding: 2rem 3rem;
+}
+
+.header-inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.header-center {
+  text-align: center;
+}
+
+.header-center h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+}
+.icon-nav {
+  display: flex;
+  gap: 2rem;
+  background: #c7d6df;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+}
+
+.nav-item {
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.nav-item:hover {
+  transform: translateY(-3px);
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+}
+
+.hero {
+  padding: 8rem 2rem;
+}
+.gallery-preview {
+  padding: 4rem 0;
+}
+
+.gallery-preview .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.cta-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.cta-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Overlay altid i bunden */
+.cta-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: 1.5rem;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0.25),
+    transparent
+  );
+
+  transition: background 0.4s ease;
+}
+
+.cta-overlay h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+}
+
+.cta-overlay p,
+.cta-overlay span {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.cta-card:hover img {
+  transform: scale(1.05);
+}
+
+.cta-card:hover .cta-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.35),
+    transparent
+  );
+}
+
+.cta-card:hover .cta-overlay p,
+.cta-card:hover .cta-overlay span {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cta-section {
+  padding: 5rem 2rem;
+}
+:root {
+  --primary-color: #0DBAAB;
+  --dark-color: #1e1e1e;
+  --light-bg: #f5f5f5;
+}
+.home .hero {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.home .hero h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
