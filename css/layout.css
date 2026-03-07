@@ -95,7 +95,22 @@ nav a {
   text-decoration: none;
   color: #222;
 }
+.page-intro {
+  max-width: 900px;
+  margin: 5rem auto;
+  text-align: center;
+}
 
+.page-intro p {
+  font-size: 1.35rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.page-intro p:first-child {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
 .hero {
   padding: 10rem 2rem;
   text-align: center;
@@ -208,7 +223,11 @@ display:block;
   font-weight: 600;
   text-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-
+.gallery-title{
+text-align:center;
+margin-bottom:3rem;
+font-size:2rem;
+}
 
 body.calm-nature {
   background-color: #c7e3cf; /* rolig grøn tone */
