@@ -15,7 +15,9 @@ body {
 body.loaded {
   opacity: 1;
 }
-
+.header-center h1{
+text-shadow: 2px 2px 6px rgba(0,0,0,0.35);
+}
 .container {
   width: 90%;
   max-width: 1200px;
@@ -117,6 +119,21 @@ nav a {
 }
 .gallery-preview {
   padding: 4rem 0;
+}
+.gallery-grid img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.25);
+transition:transform 0.35s ease, box-shadow 0.35s ease;
+
+}
+.gallery-grid img:hover{
+
+transform:scale(1.05);
+box-shadow:0 12px 28px rgba(0,0,0,0.35);
+
 }
 .site-logo{
 height:80px;
@@ -256,16 +273,17 @@ body.calm-nature {
   gap: 0.6rem;
 }
 
-.gallery-grid img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+.gallery-grid img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+box-shadow:0 6px 18px rgba(0,0,0,0.25);
+transition:transform 0.35s ease, box-shadow 0.35s ease;
 }
-.gallery-grid img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+.gallery-grid img:hover{
+transform:scale(1.04);
+box-shadow:0 12px 28px rgba(0,0,0,0.35);
 }
 .tips {
   max-width: 700px;
@@ -313,6 +331,10 @@ body.urban-energy {
 .urban-energy h1,
 .urban-energy h2 {
   color: #FFD400;
+}
+.urban-energy h1 {
+text-shadow: 2px 2px 6px rgba(0,0,0,0.35);
+
 }
 
 .urban-energy a {
@@ -455,6 +477,7 @@ body.calm-nature {
 .nav-item:hover{
 transform: translateY(-3px) scale(1.1);
 }
+
 /* Tips box */
 .calm-nature .tips {
   background-color: #064D00;
@@ -558,15 +581,7 @@ body.urban-energy {
   padding: 4rem 0;
 }
 
-/* Billeder */
-.urban-energy .gallery-grid img {
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-}
 
-.urban-energy .gallery-grid img:hover {
-  transform: scale(1.05);
-}
 
 /* Tips & tricks sektion */
 .urban-energy .tips {
@@ -583,7 +598,7 @@ body.urban-energy {
 /* Footer */
 .urban-energy footer {
   background-color: #1E1E1E;
-  color: white;
+  color: #FFD400;
   text-align: center;
   padding: 3rem 2rem;
 }
@@ -592,12 +607,12 @@ body.urban-energy {
 /* KONTAKT SIDE     */
 /* ---------------- */
 
-.contact-layout {
-  display: grid;
-  grid-template-columns: 260px 1fr;
-  gap: 6rem;
-  margin-top: 4rem;
-  align-items: start;
+.contact-layout{
+display:grid;
+grid-template-columns: 300px 1fr;
+gap:8rem;
+margin-top:6rem;
+align-items:start;
 }
 
 /* Sidebar */
@@ -623,6 +638,15 @@ body.urban-energy {
   border-radius: 10px;
   padding: 1rem;
   text-align: center;
+}
+.contact-about h2{
+font-size:1.3rem;
+margin-bottom:0.6rem;
+}
+
+.contact-about p{
+font-size:0.9rem;
+line-height:1.5;
 }
 
 /* Formular box */
@@ -666,23 +690,20 @@ body.urban-energy {
 /* Besked */
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea{
 
-  width: 380px;
-  padding: 12px;
-  margin: 12px 0;
+width:380px;
+padding:14px;
+margin:18px 0;
 
-  border-radius: 10px;
-  border: 3px solid #c22a0e;
+border-radius:10px;
+border:3px solid #c22a0e;
 
-  background: #ff3b12;
-
-  color: white;        /* TEKST FARVE */
-
-  text-align: center;
+background:#ff3b12;
+color:white;
+text-align:center;
 
 }
-
 /* Buttons */
 
 .contact-form button {
