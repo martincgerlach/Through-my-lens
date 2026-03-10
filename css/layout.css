@@ -458,7 +458,10 @@ body.calm-nature {
 .calm-nature .main-header {
   background-color: #064D00; /* Dark Green */
 }
-
+.calm-nature .gallery-grid img {
+  border: 3px solid #7A9A7E;
+  border-radius: 12px;
+}
 /* Titel */
 .calm-nature h1 {
   
@@ -515,7 +518,6 @@ body.living-creatures {
 
 /* Titel */
 .living-creatures h1 {
-    font-family: 'Oswald', sans-serif;
   color: #C2B280; /* sand */
 }
 
@@ -524,6 +526,10 @@ body.living-creatures {
   color: #C2B280;
 }
 
+.living-creatures .gallery-grid img {
+  border: 3px solid #6A7B5F;
+  border-radius: 12px;
+}
 /* Tips box */
 .living-creatures .tips {
   background-color: #5B4636;
@@ -584,6 +590,8 @@ body.urban-energy {
 .urban-energy .gallery-grid img {
   border-radius: 12px;
   transition: transform 0.3s ease;
+  border: 3px solid #4F5D75;
+  border-radius: 12px;
 }
 
 .urban-energy .gallery-grid img:hover {
