@@ -2,7 +2,9 @@
 /* Through My Lens - script.js       */
 /* ================================= */
 
-console.log("script loaded");
+window.addEventListener("load", () => {
+document.body.classList.add("loaded");
+});
 
 /* ================================= */
 /* PAGE TRANSITIONS                  */
@@ -135,7 +137,7 @@ const popup = document.getElementById("popup");
 
 imageInput.addEventListener("change", () => {
 
-```
+
 const file = imageInput.files[0];
 if (!file) return;
 
@@ -147,7 +149,7 @@ reader.onload = () => {
 };
 
 reader.readAsDataURL(file);
-```
+
 
 });
 
