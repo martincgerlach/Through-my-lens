@@ -260,15 +260,16 @@ body.calm-nature {
   margin-bottom: 2rem;
 }
 .nature-gallery {
-  margin: 3rem auto;
+  max-width: 900px;   /* mindre end før */
+  margin: 4rem auto;
 }
 
 
 
 .gallery-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
 }
 
 .gallery-grid img{
@@ -285,7 +286,7 @@ box-shadow:0 12px 28px rgba(0,0,0,0.35);
 }
 .tips {
   max-width: 700px;
-  margin: 4rem auto;
+  margin: 6rem auto;
   padding-top: 3rem;
   border-top: 2px solid rgba(0,0,0,0.2);
 }
@@ -306,7 +307,7 @@ box-shadow:0 12px 28px rgba(0,0,0,0.35);
   height: 2px;
   background-color: #3E5F4F; /* mørk naturgrøn */
   opacity: 0.5;
-  margin: 3rem auto;
+  margin: 4rem auto;
   max-width: 900px;
 }
 .nav-item.active{
@@ -364,13 +365,14 @@ body.living-creatures {
 .living-creatures .gallery-grid img {
   border: 3px solid #6A7B5F;
   border-radius: 12px;
+  max-width: 900px;  
 }
 
 .photo-card {
   cursor: pointer;
 }
 
-/* Gallery hover – same style as frontpage */
+/* Gallery hover */
 
 .photo-card {
   position: relative;
