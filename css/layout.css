@@ -127,7 +127,6 @@ object-fit:cover;
 border-radius:12px;
 box-shadow:0 6px 18px rgba(0,0,0,0.25);
 transition:transform 0.35s ease, box-shadow 0.35s ease;
-
 }
 .gallery-grid img:hover{
 
@@ -581,7 +580,15 @@ body.urban-energy {
   padding: 4rem 0;
 }
 
+/* Billeder */
+.urban-energy .gallery-grid img {
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
 
+.urban-energy .gallery-grid img:hover {
+  transform: scale(1.05);
+}
 
 /* Tips & tricks sektion */
 .urban-energy .tips {
