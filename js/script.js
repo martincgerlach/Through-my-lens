@@ -2,216 +2,101 @@
 /* Through My Lens - script.js       */
 /* ================================= */
 
+/* PAGE LOAD ANIMATION */
 window.addEventListener("load", () => {
-document.body.classList.add("loaded");
+  document.body.classList.add("loaded");
 });
 
-/* ================================= */
-/* PAGE TRANSITIONS                  */
-/* ================================= */
-
+/* DOM READY: setup page transitions, form, image preview and mobile menu */
 document.addEventListener("DOMContentLoaded", () => {
 
-const links = document.querySelectorAll("a[href]");
+  /* PAGE TRANSITIONS */
+  const links = document.querySelectorAll("a[href]");
 
-links.forEach(link => {
-link.addEventListener("click", (e) => {
+  links.forEach(link => {
+    link.addEventListener("click", (e) => {
+      const url = link.getAttribute("href");
 
-  const url = link.getAttribute("href");
+      // kun interne links
+      if (url && !url.startsWith("#") && !url.startsWith("http")) {
+        e.preventDefault();
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location.href = url;
+        }, 300);
+      }
+    });
+  });
 
-  // kun interne links
-  if (url && !url.startsWith("#") && !url.startsWith("http")) {
+  /* ELEMENT REFERENCES */
+  const form = document.getElementById("contactForm");
+  const imageInput = document.getElementById("image");
+  const preview = document.getElementById("imagePreview");
+  const popup = document.getElementById("popup");
+  const burger = document.getElementById("burger");
+  const mobileNav = document.getElementById("mobileNav");
 
-    e.preventDefault();
+  /* IMAGE PREVIEW */
+  if (imageInput && preview) {
+    imageInput.addEventListener("change", () => {
+      const file = imageInput.files[0];
+      if (!file) return;
 
-    document.body.classList.add("fade-out");
+      const reader = new FileReader();
 
-    setTimeout(() => {
-      window.location.href = url;
-    }, 300);
+      reader.onload = () => {
+        preview.src = reader.result;
+        preview.style.display = "block";
+      };
 
+      reader.readAsDataURL(file);
+    });
   }
 
-});
+  /* FORM SUBMIT */
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-```
-  const url = link.getAttribute("href");
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
 
-  // kun interne links
-  if (url && !url.startsWith("#") && !url.startsWith("http")) {
+      /* VALIDATION */
+      if (!name || !email || !message) {
+        alert("Udfyld alle felter.");
+        return;
+      }
 
-    e.preventDefault();
+      if (!email.includes("@")) {
+        alert("Indtast en gyldig email.");
+        return;
+      }
 
-    document.body.classList.add("fade-out");
+      /* POPUP */
+      if (popup) {
+        popup.classList.add("show");
+        setTimeout(() => {
+          popup.classList.remove("show");
+        }, 3000);
+      }
 
-    setTimeout(() => {
-      window.location.href = url;
-    }, 300);
+      /* MAIL */
+      const mailtoLink =
+        `mailto:martin.gerlach.2950@gmail.com?subject=Besked fra hjemmeside&body=Navn: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0ABesked: ${encodeURIComponent(message)}`;
 
+      setTimeout(() => {
+        window.location.href = mailtoLink;
+      }, 1000);
+    });
   }
 
+  /* MOBILE MENU (BURGER) */
+  if (burger) {
+    burger.addEventListener("click", () => {
+      if (mobileNav) {
+        mobileNav.classList.toggle("show");
+      }
+    });
+  }
 });
-```
-
-});
-
-});
-
-/* ================================= */
-/* PAGE LOAD ANIMATION               */
-/* ================================= */
-
-window.addEventListener("load", () => {
-document.body.classList.add("loaded");
-});
-imageInput.addEventListener("change", () => {
-
-const file = imageInput.files[0];
-if (!file) return;
-
-const reader = new FileReader();
-
-reader.onload = () => {
-  preview.src = reader.result;
-  preview.style.display = "block";
-};
-
-reader.readAsDataURL(file);
-
-});
-/* ================================= */
-/* KONTAKT FORM                      */
-/* ================================= */
-
-document.addEventListener("DOMContentLoaded", () => {
-form.addEventListener("submit", (e) => {
-
-e.preventDefault();
-
-const name = document.getElementById("name").value.trim();
-const email = document.getElementById("email").value.trim();
-const message = document.getElementById("message").value.trim();
-
-
-/* VALIDATION */
-
-if (!name || !email || !message) {
-  alert("Udfyld alle felter.");
-  return;
-}
-
-if (!email.includes("@")) {
-  alert("Indtast en gyldig email.");
-  return;
-}
-
-
-/* POPUP */
-
-popup.classList.add("show");
-
-setTimeout(() => {
-  popup.classList.remove("show");
-}, 3000);
-
-
-/* MAIL */
-
-const mailtoLink =
-  `mailto:martin.gerlach.2950@gmail.com?subject=Besked fra hjemmeside&body=Navn: ${name}%0AEmail: ${email}%0ABesked: ${message}`;
-
-setTimeout(() => {
-  window.location.href = mailtoLink;
-}, 1000);
-
-});
-const form = document.getElementById("contactForm");
-
-if (!form) return;
-
-const imageInput = document.getElementById("image");
-const preview = document.getElementById("imagePreview");
-const popup = document.getElementById("popup");
-
-/* IMAGE PREVIEW */
-
-imageInput.addEventListener("change", () => {
-
-
-const file = imageInput.files[0];
-if (!file) return;
-
-const reader = new FileReader();
-
-reader.onload = () => {
-  preview.src = reader.result;
-  preview.style.display = "block";
-};
-
-reader.readAsDataURL(file);
-
-
-});
-
-/* FORM SUBMIT */
-
-form.addEventListener("submit", (e) => {
-
-
-e.preventDefault();
-
-const name = document.getElementById("name").value.trim();
-const email = document.getElementById("email").value.trim();
-const message = document.getElementById("message").value.trim();
-
-
-/* VALIDATION */
-
-if (!name || !email || !message) {
-  alert("Udfyld alle felter.");
-  return;
-}
-
-if (!email.includes("@")) {
-  alert("Indtast en gyldig email.");
-  return;
-}
-
-
-/* POPUP */
-
-popup.classList.add("show");
-
-setTimeout(() => {
-  popup.classList.remove("show");
-}, 3000);
-
-
-/* MAIL */
-
-const mailtoLink =
-  `mailto:martin.gerlach.2950@gmail.com?subject=Besked fra hjemmeside&body=Navn: ${name}%0AEmail: ${email}%0ABesked: ${message}`;
-
-setTimeout(() => {
-  window.location.href = mailtoLink;
-}, 1000);
-
-
-});
-
-});
-
-/* ================================= */
-/* MOBILE MENU (BURGER)              */
-/* ================================= */
-
-const burger = document.getElementById("burger");
-const mobileNav = document.getElementById("mobileNav");
-
-if (burger) {
-
-burger.addEventListener("click", () => {
-mobileNav.classList.toggle("show");
-});
-
-}
