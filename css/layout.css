@@ -845,7 +845,7 @@ justify-content:space-between;
 display:flex;
 align-items:center;
 gap:0.8rem;
-order:3;
+order:1;
 }
 
 .header-center{
@@ -858,7 +858,7 @@ order:2;
 display:flex;
 align-items:center;
 gap:1rem;
-order:1;
+order:3;
 }
 
 }

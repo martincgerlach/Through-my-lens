@@ -109,31 +109,31 @@ let foundPhotos = 0;
 
 nycPhotos.forEach(photo => {
 
-photo.addEventListener("click", function(){
+  photo.addEventListener("click", function(){
 
-if(!photo.classList.contains("found")){
+    if(photo.classList.contains("found")){
+      photo.classList.remove("found");
+      foundPhotos--;
+    } else {
+      photo.classList.add("found");
+      foundPhotos++;
+    }
 
-photo.classList.add("found");
-foundPhotos++;
+    if(foundPhotos === nycPhotos.length){
+      secret.classList.add("show");
 
-}
+      setTimeout(() => {
+        secret.classList.remove("show");
+      }, 5000);
+    }
 
-if(foundPhotos === nycPhotos.length){
-
-secret.classList.add("show");
-
-/* auto hide efter 5 sek */
-setTimeout(() => {
-secret.classList.remove("show");
-}, 5000);
-
-}
-
-});
+  });
 
 });
 
 /* klik for at lukke */
-closeBtn.addEventListener("click", function(){
-secret.classList.remove("show");
-});
+if(closeBtn){
+  closeBtn.addEventListener("click", function(){
+    secret.classList.remove("show");
+  });
+}
