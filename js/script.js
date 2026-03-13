@@ -101,39 +101,3 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-const nycPhotos = document.querySelectorAll(".nyc-photo");
-const secret = document.getElementById("nyc-secret");
-const closeBtn = document.getElementById("secret-close");
-
-let foundPhotos = 0;
-
-nycPhotos.forEach(photo => {
-
-  photo.addEventListener("click", function(){
-
-    if(photo.classList.contains("found")){
-      photo.classList.remove("found");
-      foundPhotos--;
-    } else {
-      photo.classList.add("found");
-      foundPhotos++;
-    }
-
-    if(foundPhotos === nycPhotos.length){
-      secret.classList.add("show");
-
-      setTimeout(() => {
-        secret.classList.remove("show");
-      }, 5000);
-    }
-
-  });
-
-});
-
-/* klik for at lukke */
-if(closeBtn){
-  closeBtn.addEventListener("click", function(){
-    secret.classList.remove("show");
-  });
-}

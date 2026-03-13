@@ -1,0 +1,76 @@
+@media (max-width:768px){
+
+.main-header{
+padding:1.5rem 1rem;
+}
+
+.hero{
+padding:4rem 1rem;
+}
+@media (max-width:768px){
+
+/* hide desktop nav */
+.icon-nav{
+display:none;
+}
+
+/* show menu when burger clicked */
+.icon-nav.show{
+display:flex;
+flex-direction:column;
+position:absolute;
+top:80px;
+right:15px;
+background:#c7d6df;
+padding:1.2rem;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* show burger */
+.burger{
+display:block;
+}
+
+}
+.hero h2{
+font-size:1.4rem;
+line-height:1.4;
+}
+
+.cta-grid{
+grid-template-columns:1fr;
+gap:1.5rem;
+}
+
+.cta-card img{
+height:460px;
+}
+
+.gallery-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.gallery-grid img{
+height:260px;
+}
+
+.intro{
+padding:0 1.5rem;
+}
+
+.site-logo{
+height:75px;
+}
+
+.nav-item{
+font-size:1.3rem;
+}
+
+/* burger only on mobile */
+
+.burger{
+display:block;
+}
+
+}

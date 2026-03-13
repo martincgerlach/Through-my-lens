@@ -1,0 +1,185 @@
+/* FRONT PAGE HERO */
+
+.home .hero{
+background-color:#0DBAAB;
+color:white;
+padding:6rem 0;
+text-align:center;
+}
+
+/* CALM NATURE */
+
+body.calm-nature{
+background:#C7E3CF;
+color:#1e1e1e;
+}
+
+.calm-nature .main-header{
+background:#064D00;
+}
+.nature-intro{
+max-width:900px;
+margin:5rem auto;
+text-align:center;
+}
+.nature-intro p{
+line-height:1.7;
+margin-bottom:1.2rem;
+}
+.calm-nature h1{
+color:#C2B280;
+}
+
+.calm-nature .gallery-grid img{
+border:3px solid #7A9A7E;
+}
+
+.calm-nature footer{
+background:#064D00;
+color:#C2B280;
+}
+
+.calm-nature .hero{
+text-align:center;
+}
+
+.calm-nature .hero h2{
+margin:0 auto;
+max-width:900px;
+}
+
+/* CALM NATURE TIPS */
+
+.calm-nature .tips{
+background:#064D00;
+color:#C2B280;
+}
+
+.calm-nature .tips h2{
+color:#C2B280;
+}
+
+/* LIVING CREATURES */
+
+body.living-creatures{
+background:#C7B299;
+color:#5B4636;
+}
+
+.living-creatures .main-header{
+background:#5B4636;
+}
+
+.living-creatures h1{
+color:#C2B280;
+}
+
+.living-creatures .gallery-grid img{
+border:3px solid #6A7B5F;
+}
+
+/* LIVING CREATURES TIPS */
+
+.living-creatures .tips{
+background:#5B4636;
+color:#ECE6DF;
+}
+
+.living-creatures .tips h2{
+color:#C2B280;
+}
+
+/* URBAN ENERGY */
+
+body.urban-energy{
+background:#2F80ED;
+color:white;
+}
+
+.urban-energy .main-header{
+background:#1E1E1E;
+}
+
+.urban-energy h1{
+font-family:'Oswald',sans-serif;
+letter-spacing:1px;
+text-transform:uppercase;
+font-size:3rem;
+color:#FFD400;
+}
+
+.urban-energy h2{
+font-family:'Oswald',sans-serif;
+color:#FFD400;
+}
+
+.urban-energy .section-divider{
+background:#FFD400;
+}
+
+/* URBAN ENERGY TIPS */
+
+.urban-energy .tips{
+background:#1E1E1E;
+color:#FF8C42;
+}
+
+.urban-energy .tips h2{
+color:#FFD400;
+}
+
+
+/* URBAN ENERGY INTRO */
+
+.urban-energy .page-intro{
+color:#FF8C42;
+}
+
+
+/* CONTACT PAGE */
+
+.contact-layout{
+display:grid;
+grid-template-columns:300px 1fr;
+gap:8rem;
+margin-top:6rem;
+align-items:start;
+}
+
+.contact-sidebar{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.contact-profile{
+width:220px;
+border-radius:12px;
+border:3px solid #dcdcdc;
+padding:6px;
+}
+
+.contact-about{
+width:220px;
+height:220px;
+background:#7b7b7b;
+margin-top:1.5rem;
+border-radius:10px;
+padding:1rem;
+text-align:center;
+}
+
+.contact-form-wrapper{
+border:4px solid #6e6e6e;
+border-radius:10px;
+padding:4rem 5rem;
+max-width:700px;
+margin:0 auto;
+background:white;
+}
+
+.contact-form{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
