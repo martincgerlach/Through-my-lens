@@ -1,9 +1,9 @@
 /* FRONT PAGE HERO */
 
-.home .hero{
-background-color:#0DBAAB;
+.hero{
+background:#5f7f73;   /* darker green */
 color:white;
-padding:6rem 0;
+padding:4rem 2rem;
 text-align:center;
 }
 
