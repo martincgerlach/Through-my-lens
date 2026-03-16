@@ -47,6 +47,9 @@ text-align:center;
 margin:0 auto;
 max-width:900px;
 }
+.calm-nature .gallery-grid img{
+border-color:#7A9A7E;
+}
 
 /* CALM NATURE TIPS */
 
@@ -78,6 +81,7 @@ color:#C2B280;
 border:3px solid #6A7B5F;
 }
 
+
 /* LIVING CREATURES TIPS */
 
 .living-creatures .tips{
@@ -88,7 +92,9 @@ color:#ECE6DF;
 .living-creatures .tips h2{
 color:#C2B280;
 }
-
+.living-creatures .gallery-grid img{
+border-color:#6A7B5F;
+}
 /* URBAN ENERGY */
 
 body.urban-energy{
@@ -116,7 +122,13 @@ color:#FFD400;
 .urban-energy .section-divider{
 background:#FFD400;
 }
-
+.urban-energy .photo-card{
+border-color:#4F5D75;
+}
+.urban-energy .photo-card:hover{
+border-color:#FFD400;
+box-shadow:0 0 12px rgba(255,212,0,0.5);
+}
 /* URBAN ENERGY TIPS */
 
 .urban-energy .tips{
@@ -135,7 +147,9 @@ color:#FFD400;
 color:#FF8C42;
 }
 
-
+.urban-energy .gallery-grid img{
+border-color:#4F5D75;
+}
 /* CONTACT PAGE */
 
 .contact-layout{

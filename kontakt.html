@@ -5,15 +5,12 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="robots" content="noindex, nofollow">
-
+<meta name="description" content="Fotografi portfolio af Martin Gerlach med natur, dyr og byliv.">
+<link rel="canonical" href="https://martincgerlach.github.io/Through-my-lens/">
 <title>Kontakt mig</title>
-
-<link rel="stylesheet" href="css/general.css">
-<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/themes.css">
-<link rel="stylesheet" href="css/mobile.css">
+
 
 <link rel="icon" type="image/png" href="assets/imgs/favicon.png">
 
@@ -85,21 +82,17 @@
 
 <section class="contact-form-wrapper">
 
-<form class="contact-form" id="contactForm">
+<form id="contactForm" class="contact-form">
 
-<input type="text" id="name" placeholder="Navn" required>
+<input id="name" name="name" type="text" placeholder="Navn" required>
 
-<input type="email" id="email" placeholder="E-mail" required>
+<input id="email" name="email" type="email" placeholder="E-mail" required>
 
-<textarea id="message" placeholder="Besked" required></textarea>
-
-<input type="file" id="image" accept="image/*">
+<textarea id="message" name="message" placeholder="Besked" required></textarea>
 
 <button type="submit">Send besked</button>
 
 </form>
-
-</section>
 
 
 <div id="popup" class="popup">
@@ -115,7 +108,7 @@ Tak for din besked!
 
 </footer>
 
-
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script src="js/script.js"></script>
 
 </body>

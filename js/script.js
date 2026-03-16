@@ -53,43 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* FORM SUBMIT */
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
-
-      /* VALIDATION */
-      if (!name || !email || !message) {
-        alert("Udfyld alle felter.");
-        return;
-      }
-
-      if (!email.includes("@")) {
-        alert("Indtast en gyldig email.");
-        return;
-      }
-
-      /* POPUP */
-      if (popup) {
-        popup.classList.add("show");
-        setTimeout(() => {
-          popup.classList.remove("show");
-        }, 3000);
-      }
-
-      /* MAIL */
-      const mailtoLink =
-        `mailto:martin.gerlach.2950@gmail.com?subject=Besked fra hjemmeside&body=Navn: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0ABesked: ${encodeURIComponent(message)}`;
-
-      setTimeout(() => {
-        window.location.href = mailtoLink;
-      }, 1000);
-    });
-  }
+  
 
   /* MOBILE MENU (BURGER) */
   if (burger) {
@@ -101,3 +65,42 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+emailjs.init("E70-4Otl9rzC5FAho");
+
+const form = document.getElementById("contactForm");
+
+if(form){
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+emailjs.send("service_owwk01r","template_yg0a95g",{
+
+name: document.getElementById("name").value,
+email: document.getElementById("email").value,
+message: document.getElementById("message").value
+
+}).then(function(){
+
+const popup = document.getElementById("popup");
+
+if(popup){
+popup.classList.add("show");
+
+setTimeout(()=>{
+popup.classList.remove("show");
+},3000);
+}
+
+form.reset();
+
+}, function(error){
+
+alert("Noget gik galt. Prøv igen.");
+
+});
+
+});
+
+}
